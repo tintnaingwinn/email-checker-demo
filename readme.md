@@ -7,7 +7,7 @@ Email Checker Demo (Laravel5.4 and Vue 2.1)
 Clone the repo to your local machine
 
   ```
-  git clone https://github.com/jcc/email-checker-demo.git
+  git clone https://github.com/tintnaingwinn/email-checker-demo.git
   cd email-checker-demo
   ```
 
