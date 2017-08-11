@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#138e69">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="/images/favicon-32x32.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
 
     <title>Email Checker</title>
-
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     <script>
@@ -21,7 +23,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url('https://drscdn.500px.org/photo/186489967/q%3D80_m%3D1500/v2?webp=true&sig=18c28bb1800de0763190dbd822850bcba1c58f6507aba42c3a6ec83d199670f2')">
 
 <div class="container" id="app">
     <div class="header clearfix">
@@ -42,7 +44,7 @@
 
             </ul>
         </nav>
-        <h3 class="text-muted">Email Checker</h3>
+        <h3 style="color: white">Email Checker</h3>
     </div>
 
     <router-view></router-view>
@@ -59,6 +61,18 @@
 </div> <!-- /container -->
 
 <script src="{{ mix('js/app.js') }}"></script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+            // Registration Success
+            console.log('[serviceWorker]: registration successful with scope: ', registration.scope);
+        }).catch(function (err) {
+            // Registration failed :(
+            console.log('[serviceWorker] registration failed', err);
+        });
+    }
+</script>
 
 @stack('scripts')
 

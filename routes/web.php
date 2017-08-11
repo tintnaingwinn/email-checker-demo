@@ -16,3 +16,13 @@ Route::get('/', function () {
 });
 
 Route::post('/check','EmailCheckController@index');
+
+Route::get('test','EmailCheckController@test');
+
+/**
+ * SPA Routes.
+ */
+// vuejs frontend page.
+Route::get('{vue_capture?}', function() {
+    return View::make('welcome');
+})->where('vue_capture', '[\/\w\.-]*');

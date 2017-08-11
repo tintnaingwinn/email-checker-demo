@@ -14,11 +14,13 @@
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
     "jquery": "^3.1.1",
-    "laravel-mix": "0.*",
+    "laravel-mix": "1.*",
     "lodash": "^4.17.4",
-    "vue": "^2.1.10"
+    "vue": "^2.4.1"
   },
   "dependencies": {
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "sw-toolbox": "^3.6.0",
     "vue-router": "^2.4.0"
   }
 }

@@ -6,7 +6,7 @@
                 <alert type="danger" :message="message" v-if="fail"></alert>
             </div>
 
-            <h1>Looking to verify email?</h1>
+            <h1 style="color: white;">Looking to verify email?</h1>
 
             <form action="/check" method="post" @submit.prevent="checkEmail" @keydown="clearError($event.target.name)">
 
